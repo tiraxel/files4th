@@ -27,7 +27,7 @@
   <th>Edad</th>
  </tr>
  <?php
-  $conn = mysqli_connect("dbmysql", "root", "1234", "people");
+  $conn = mysqli_connect("192.168.100.15:3306", "root", "1234", "people");
   //Check connection
   if ($conn->connect_error) {
    die("Connection failed: " . $conn->connect_error);
