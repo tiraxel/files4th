@@ -44,7 +44,7 @@ Vagrant.configure("2") do |config|
       docker.image = "nginx:latest"
       docker.ports = ["8280:80"]
       docker.name = "balanceador"
-      #docker.volumes = ["/home/pvaldes/cuartoejercicio/balanceador:/etc/nginx"]
+      docker.volumes = ["/home/pvaldes/cuartoejercicio/balanceador/nginx.conf:/etc/nginx/nginx.conf"]
       docker.create_args = [
              "--network", "vagrant_default",
              "--restart", "always",
