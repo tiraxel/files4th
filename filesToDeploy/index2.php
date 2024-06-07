@@ -32,7 +32,7 @@
   if ($conn->connect_error) {
    die("Connection failed: " . $conn->connect_error);
   }
-  $sql = "SELECT id, nombre, apellido, edad FROM registro";
+  $sql = "SELECT id, nombre, apellido, edad FROM registro WHERE edad > 30";
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
    // output data of each row
